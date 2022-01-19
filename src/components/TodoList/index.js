@@ -23,7 +23,7 @@ function TodoList() {
         // renderItem={() => <TodoItem />}
       />
       {todoList.map((todo, index) => (
-        <TodoItem />
+        <TodoItem key={index} todo={todo} id={index} />
       ))}
     </div>
   );

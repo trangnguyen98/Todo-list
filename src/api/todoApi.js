@@ -2,7 +2,7 @@ import axiosClient from "./axiosClient";
 
 const todoApi = {
   getAll() {
-    const url = `/todos`;
+    const url = `/Todos`;
     return axiosClient.get(url);
   },
 

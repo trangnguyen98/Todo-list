@@ -2,16 +2,19 @@ import React, { useState } from "react";
 import { Row, Col, Form, Button, Input } from "antd";
 import { PlusCircleFilled } from "@ant-design/icons";
 import todoApi from "../../api/todoApi";
+import "./style.css";
 function AddTodoForm() {
   const [form] = Form.useForm();
 
   const [todo, setTodo] = useState("");
 
   const handleSubmit = async () => {
+    // e.preventDefault();
     try {
       await todoApi.addTodo({
         name: todo,
       });
+      setTodo("");
     } catch (error) {
       console.log("errors");
     }
