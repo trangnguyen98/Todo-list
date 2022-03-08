@@ -7,9 +7,11 @@ function AddTodoForm() {
   const [form] = Form.useForm();
 
   const [todo, setTodo] = useState("");
+  console.log("test");
 
   const handleSubmit = async () => {
     // e.preventDefault();
+
     try {
       await todoApi.addTodo({
         name: todo,
@@ -29,6 +31,7 @@ function AddTodoForm() {
 
   return (
     <div>
+      {console.log("test1")}
       <Form
         form={form}
         onFinish={onFinish}

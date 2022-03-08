@@ -2,7 +2,6 @@ import "./App.css";
 import "antd/dist/antd.css";
 import AddTodoForm from "./components/AddTodoForm";
 import TodoList from "./components/TodoList";
-import TodoItem from "./components/TodoItem";
 
 function App() {
   return (
@@ -10,7 +9,6 @@ function App() {
       <h1>Todo App</h1>
       <AddTodoForm />
       <TodoList />
-      <TodoItem />
     </div>
   );
 }

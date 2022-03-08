@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { List } from "antd";
+import { List, Typography, Divider } from "antd";
 import TodoItem from "../TodoItem";
 import todoApi from "../../api/todoApi";
 
@@ -14,17 +14,32 @@ function TodoList() {
   return (
     <div>
       <List
+        size="large"
+        // header={<div>Header</div>}
+        // footer={<div>Footer</div>}
+        bordered
+        dataSource={todoList}
+        renderItem={(item) => (
+          <List.Item>
+            {item.name}
+            <button>Xoa</button>
+          </List.Item>
+        )}
+      />
+      {/* <List
         local={{ emtyText: "There's nothing to do" }}
         size="large"
         // header={<div>Header</div>}
         // footer={<div>Footer</div>}
         bordered
-        // dataSource={}
+        dataSource={["a", "b"]}
         // renderItem={() => <TodoItem />}
-      />
-      {todoList.map((todo, index) => (
-        <TodoItem key={index} todo={todo} id={index} />
-      ))}
+      /> */}
+      {/* {todoList.map((todo, index) => (
+          <TodoItem key={index} value={todo.id} />
+        ))}
+        <TodoItem value="aaa" /> */}
+      {/* </List> */}
     </div>
   );
 }

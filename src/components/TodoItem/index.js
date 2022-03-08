@@ -3,16 +3,15 @@ import { Tooltip, List, Popconfirm, Button, Switch } from "antd";
 import { CloseOutlined, CheckOutlined } from "@ant-design/icons";
 import "./style.css";
 
-function TodoItem({ todo, id }) {
+function TodoItem({ todo }) {
   return (
     <div>
       <List.Item
         actions={[
           <Tooltip
-            id={id}
-            // title={todo.completed ? "Mark as uncompleted" : "Mark as completed"}
+          // id={id}
           >
-            {todo.name}
+            {/* {todo.name} */}
             <Switch
               checkedChildren={<CheckOutlined />}
               unCheckedChildren={<CloseOutlined />}
@@ -33,9 +32,8 @@ function TodoItem({ todo, id }) {
             </Button>
           </Popconfirm>,
         ]}
-        // className="list-item"
-        // key={todo.id}
       >
+        {/* {todo.name} */}
         {/* <div className="todo-item"> */}
         {/* <Tag color={todo.completed ? "cyan" : "red"} className="todo-tag"> */}
         {/* {todo.name} */}
